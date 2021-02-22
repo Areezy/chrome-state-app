@@ -1,21 +1,58 @@
-// document.addEventListener("DOMContentLoaded",function(){
-//     document.querySelector("button").addEventListener('click', onClick, false)
-//     function onClick() {
-//         alert(chrome.tabs.url);
-//     }
-// });.
+var textFile = null,
+  makeTextFile = function (text) {
+    var data = new Blob([text], { type: 'text/plain' });
 
-// chrome.tabs.query({active: false, currentWindow: false}, function(tabs){
-//     for (var i = 0; i < tabs.length; i++) {
-//         console.log(tabs[i].url);
-//     }
-    
-// });
-
-
-chrome.tabs.getAllInWindow(null, function(tabs){
-    for (var i = 0; i < tabs.length; i++) {
-        console.log(tabs[i].url);                  
+    if (textFile !== null) {
+      window.URL.revokeObjectURL(textFile);
     }
-});
+
+    textFile = window.URL.createObjectURL(data);
+
+    return textFile;
+
+  };
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelector("button").addEventListener('click', onClick, false)
+  function onClick() {
+    var link = document.getElementById('downloadlink');
+    var myString = [];
+    var start_chrome = "start chrome";
+    chrome.tabs.query({ currentWindow: true }, function (tabs) {
+      for (var i = 0; i < tabs.length; i++) {
+
+
+
+        myString.push(tabs[i].url);
+
+        if (i == tabs.length - 1) {
+          for (var j = 0; j < tabs.length; j++) {
+            start_chrome = start_chrome.concat(" ");
+            var string = String(myString[j]);
+            start_chrome = start_chrome.concat(string);
+            start_chrome = start_chrome.concat(" ");
+
+
+          }
+
+          console.log(start_chrome);
+
+          link.href = makeTextFile(start_chrome);
+
+          link.style.display = 'block';
+        }
+
+      }
+    });
+
+
+  }
+})
+
+
+
+
+
+
 
