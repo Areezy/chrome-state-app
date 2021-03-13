@@ -1,6 +1,7 @@
 {
     "name":"Chrome State App",
     "version":"0.0.1",
+    "description": "Save all the tabs in your browser with just a click of a button",
     "manifest_version":2,
     "permissions": [
         "tabs"
