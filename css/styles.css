@@ -1,0 +1,38 @@
+body {
+  /* background-color: #323639; */
+  background-color: white;
+}
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.flex-container > div {
+  margin: 10px;
+}
+
+#save {
+  transition-duration: 0.4s;
+  padding: 4px 4px;
+}
+
+#save:hover {
+  background-color: #4caf50; /* Green */
+  color: white;
+}
+
+/* a:link,
+a:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 4px 4px;
+  text-decoration: none;
+}
+
+a:hover,
+a:active {
+  background-color: red;
+} */
+

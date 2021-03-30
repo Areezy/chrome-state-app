@@ -4,12 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./css/styles.css">
 
 </head>
 <body>
-    <img src="icons/logo_transparent.png" alt="Chrome State Logo" width=91 height=91 >
-    <button id= "save">Save State</button>
-    <a download="State.bat" id="downloadlink" style="display: none">Download State</a>    
+    <div class="flex-container">
+        <div class='image-section'>
+            <img src="icons/logo_transparent.png" alt="Chrome State Logo" width=91 height=91>
+        </div>
+        <div class="body-content">
+            <button id="save">Save State</button>
+            <textarea style="display: none">Hello there</textarea>
+        </div>
+        <div class="link-content">
+            <a download="State.bat" id="downloadlink" style="display: none" title="Download State"><img src= "./icons/download.png" width=45 height=45></a>
+        </div>
+    </div>
     <script src = "popup.js" charset="UTF-8"></script>
 </body>
 </html>
