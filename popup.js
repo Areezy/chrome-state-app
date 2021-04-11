@@ -21,7 +21,7 @@ var months = ["January", "February", "March", "April", "May", "June", "July", "A
 
 
 document.addEventListener("DOMContentLoaded", function () {
-  document.querySelector("button").addEventListener('click', onClick, false)
+  document.getElementById("save").addEventListener('click', onClick, false)
   function onClick() {
     var link = document.getElementById('downloadlink');
     var button = document.getElementById('save');
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
           link.style.display = 'block';
 
           var stateName = date.getHours() + "" + date.getMinutes() + "" + date.getSeconds() + "_" + "State.bat";
-          
+
           link.download =  stateName;
           
         }
