@@ -22,9 +22,9 @@ document.addEventListener("DOMContentLoaded", function () {
     chrome.tabs.query({ currentWindow: true }, function (tabs) {
       for (var i = 0; i < tabs.length; i++) {
 
-
-
-        myString.push(tabs[i].url);
+        '"' + tabs[i].url + '"'; 
+        JSON.stringify(tabs[i].url);
+        myString.push(JSON.stringify(tabs[i].url));
 
         if (i == tabs.length - 1) {
           for (var j = 0; j < tabs.length; j++) {
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
           }
 
-          console.log(start_chrome);
+          //console.log(start_chrome);
 
           link.href = makeTextFile(start_chrome);
 
