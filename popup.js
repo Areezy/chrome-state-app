@@ -12,13 +12,21 @@ var textFile = null,
 
   };
 
+var date = new Date();
+
+
+var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+
 
 document.addEventListener("DOMContentLoaded", function () {
   document.querySelector("button").addEventListener('click', onClick, false)
   function onClick() {
     var link = document.getElementById('downloadlink');
+    var button = document.getElementById('save');
     var myString = [];
-    var start_chrome = "start chrome";
+    var startChrome = "start chrome";
     chrome.tabs.query({ currentWindow: true }, function (tabs) {
       for (var i = 0; i < tabs.length; i++) {
 
@@ -28,19 +36,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (i == tabs.length - 1) {
           for (var j = 0; j < tabs.length; j++) {
-            start_chrome = start_chrome.concat(" ");
+            startChrome = startChrome.concat(" ");
             var string = String(myString[j]);
-            start_chrome = start_chrome.concat(string);
-            start_chrome = start_chrome.concat(" ");
+            startChrome = startChrome.concat(string);
+            startChrome = startChrome.concat(" ");
 
 
           }
 
-          //console.log(start_chrome);
+          link.href = makeTextFile(startChrome);
 
-          link.href = makeTextFile(start_chrome);
+          button.style.display = 'none';
 
           link.style.display = 'block';
+
+          var stateName = date.getHours() + "" + date.getMinutes() + "" + date.getSeconds() + "_" + "State.bat";
+          
+          link.download =  stateName;
+          
         }
 
       }
@@ -48,9 +61,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   }
-})
+});
 
 
+
+  
 
 
 
