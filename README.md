@@ -15,4 +15,7 @@ A single browser window with all its tabs and content can be viewed as the state
 - Download Icon was made by [Pixel perfect](https://www.flaticon.com/authors/pixel-perfect) and gotten from [flaticon](https://www.flaticon.com)
 - Logo was generated [here](https://hatchful.shopify.com/)
 
+## Chrome Webstore Listing
+The extension is currently being reviewed and will be published on the chrome webstore soon.
+
 
