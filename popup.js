@@ -1,24 +1,18 @@
-var textFile = null,
-  makeTextFile = function (text) {
+var scriptFile = null,
+  makeScriptFile = function (text) {
     var data = new Blob([text], { type: 'text/plain' });
 
-    if (textFile !== null) {
-      window.URL.revokeObjectURL(textFile);
+    if (scriptFile !== null) {
+      window.URL.revokeObjectURL(scriptFile);
     }
 
-    textFile = window.URL.createObjectURL(data);
+    scriptFile = window.URL.createObjectURL(data);
 
-    return textFile;
+    return scriptFile;
 
   };
 
 var date = new Date();
-
-
-var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-
-
 
 document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("save").addEventListener('click', onClick, false)
@@ -44,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
           }
 
-          link.href = makeTextFile(startChrome);
+          link.href = makeScriptFile(startChrome);
 
           button.style.display = 'none';
 

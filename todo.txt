@@ -1,3 +1,0 @@
-- Style buttons
-- Check Background colour
-- Custom names
