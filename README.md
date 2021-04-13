@@ -12,7 +12,7 @@ A single browser window with all its tabs and content can be viewed as the state
 
 
 ## Credits 
-- Download Icon was made by [Pixel perfect](https://www.flaticon.com/authors/pixel-perfect) and gotten from [flaticon](www.flaticon.com)
+- Download Icon was made by [Pixel perfect](https://www.flaticon.com/authors/pixel-perfect) and gotten from [flaticon](https://www.flaticon.com)
 - Logo was generated [here](https://hatchful.shopify.com/)
 
 
