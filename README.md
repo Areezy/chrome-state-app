@@ -16,6 +16,6 @@ A single browser window with all its tabs and content can be viewed as the state
 - Logo was generated [here](https://hatchful.shopify.com/)
 
 ## Chrome Webstore Listing
-This extension can be download [here.](https://chrome.google.com/webstore/detail/chrome-state-app-save-all/ooemigfmcnmokocfhepgnpckekhnjabi)
+This extension can be downloaded [here.](https://chrome.google.com/webstore/detail/chrome-state-app-save-all/ooemigfmcnmokocfhepgnpckekhnjabi)
 
 
